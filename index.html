@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TestGame</title>
+    <link rel="stylesheet" type="text/css" href="/css/red.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/game.css">
+    <link rel="stylesheet" href="/css/progressbar.css"/>
+    <link rel="stylesheet" href="/css/palette-color-picker.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="/js/progressbar.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="/js/pace.min.js"></script>
+</head>
+<body>
+
+<div id="signDiv">
+    Username: <input id="signDiv-username" type="text" SIZE=25><br>
+    Password: <input TYPE="password" NAME="password" SIZE=25 MAXLENGTH=25 id="signDiv-password"><br>
+    <input type="submit" class="btn" value="Sign In" id="signDiv-signIn">
+    <input type="submit" class="btn" value="Sign Up" id="signDiv-signUp">
+    <div class="palette">
+        <input id="inputP" type="text" name="unique-name-1" value="#4BACC6">
+    </div>
+</div>
+
+<div id="contentWrap" style="display: none;">
+    <div id="topWrap"  unselectable="on">
+        <h2 unselectable="on">Chat</h2>
+        <div id="nickname" unselectable="on"></div>
+        <div id="usernameWrap" style="display: none;" unselectable="on">
+            <form id="setUsername" >
+                <input id="username" type="text" placeholder="Enter your name" >
+                <input type="submit" id="submitUser" class="btn" value="Submit">
+            </form>
+         </div>
+    </div>
+    <div id="wrapper" style="display: none;">
+        <div id="chatWrap">
+            <div id="chat">
+                <span class="msg"><b>TEST:</b>adasdasd<br></span>
+            </div>
+            <form id="send-message" >
+                <textarea id="message" placeholder="Enter your message here. /w username 'message' to send whisper " form="send-message" maxlength="80" ></textarea>
+                <input type="submit" id="submitMsg" value="Submit">
+            </form>
+            <h1>Users connected:</h1>
+            <div id="users"></div>
+        </div>
+    </div>
+</div>
+
+<div id="check" style="display: none;" >
+        <img src="/img/pixel.png" alt="Just Background" style="width:100%">
+    <div class="cont">
+        <input type="submit" class="btn" value="-- Start again --" id="checkme">
+    </div>
+    <div class="palette">
+        <input id="inputPP" type="text" name="unique-name-2" value="#4BACC6">
+    </div>
+
+</div>
+
+
+<canvas id="mycanvas" width="800" height="480" style="display: none;" tabindex="0" >Canvas tag not supported</canvas>
+
+<div id="wrapInfo" style="display: none;" >
+    <div id="info">
+        HP: 100
+    </div>
+    <div id="my-progressbar"></div>
+</div>
+
+    <script type="text/javascript" src="/js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="/js/palette-color-picker.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script> <!-- http://127.0.0.1:3000 -->
+    <script type="text/javascript" src="/js/client.js"></script>
+</body>
+</html>
